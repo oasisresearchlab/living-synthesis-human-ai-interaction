@@ -1,0 +1,338 @@
+{
+  "nodeTypes": [
+    {
+      "id": "node_Gp7JMdrzm9DUuPfBzUptc",
+      "name": "Question",
+      "format": "QUE - {content}",
+      "color": "#99890e",
+      "created": 1795537366754,
+      "modified": 1795542758830,
+      "template": "T - Question",
+      "description": "Unknowns that we want to make known, and is addressable by our experiments, prototypes, etc.",
+      "tag": "q-candidate",
+      "folderPath": "Discourse Graph/Questions"
+    },
+    {
+      "id": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "name": "Claim",
+      "format": "CLM - {content}",
+      "color": "#7DA13E",
+      "tag": "clm-candidate",
+      "created": 1795537366754,
+      "modified": 1795542767552,
+      "template": "T - Claim",
+      "description": "Atomic, generalized assertions about the world that (propose to) answer research questions",
+      "folderPath": "Discourse Graph/Claims"
+    },
+    {
+      "id": "node_E5uZ_O-NU-879JxbpJtcV",
+      "name": "Evidence",
+      "format": "EVD - {content}",
+      "color": "#DB134A",
+      "tag": "evd-candidate",
+      "created": 1795537366754,
+      "modified": 1795542775519,
+      "template": "T - Evidence",
+      "description": "A specific empirical observation from a particular study",
+      "folderPath": "Discourse Graph/Evidence"
+    },
+    {
+      "id": "node_wZiOhnAnXKDVhrvl-7Z4P",
+      "name": "Source",
+      "format": "@{content}",
+      "color": "#cdc1c1",
+      "tag": "src-candidate",
+      "created": 1795537366754,
+      "modified": 1795542784116,
+      "template": "T - Source",
+      "description": "Some published research source, like a book, conference paper, or journal article",
+      "folderPath": "Discourse Graph/Sources"
+    },
+    {
+      "id": "node_VnAbDK_IqWL3QAteAd_FY",
+      "name": "Pattern",
+      "format": "PTN - {content}",
+      "template": "T - Pattern",
+      "description": "Conceptual classes such as theoretical objects, heuristics, design patterns, and system/methodological approaches, that are abstracted from a *specific* implementation. They are what make specific systems \"work\" or not, matched to a model of the problem.",
+      "color": "#4fdb33",
+      "tag": "ptn-candidate",
+      "created": 1771362656254,
+      "modified": 1795537576414,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/node_VnAbDK_IqWL3QAteAd_FY"
+    },
+    {
+      "id": "node_LyyTDCfZHGTvQWfvU0h8m",
+      "name": "Artifact",
+      "format": "ART - {content}",
+      "template": "T - Artifact",
+      "description": "Specific concrete systems (prototypes, standards, etc.) that instantiate one or more conceptual patterns or methods",
+      "color": "#e87d7d",
+      "tag": "art-candidate",
+      "keyImage": true,
+      "created": 1771362656254,
+      "modified": 1795537576414,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/node_LyyTDCfZHGTvQWfvU0h8m"
+    },
+    {
+      "id": "node_MHe-c4waC9fiFpWvyg6lS",
+      "name": "Experiment",
+      "format": "EXP - {content}",
+      "template": "T - Experiment",
+      "description": "A scoped application of a specific research method to answer or test a specific research question or hypothesis, from which individual artifacts or evidence will be produced",
+      "color": "#dbd2d2",
+      "tag": "exp-candidate",
+      "created": 1771362656254,
+      "modified": 1795537576414,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/node_MHe-c4waC9fiFpWvyg6lS"
+    },
+    {
+      "id": "node_tGVLjp3YcT-YOsjISg_Na",
+      "name": "Theory",
+      "format": "THE - {content}",
+      "template": "",
+      "tag": "",
+      "color": "#808080",
+      "created": 1795538185996,
+      "modified": 1795542790884,
+      "description": "Named theory (not a concept), like a model or explanatory/predictive/causal theory",
+      "folderPath": "Discourse Graph/Theories"
+    }
+  ],
+  "relationTypes": [
+    {
+      "id": "relation_6SXJtU8zEp8ctbfQuF5Ti",
+      "label": "supports",
+      "complement": "is supported by",
+      "color": "green",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "relation_dzAJE17IkEae0qq-_4AM4",
+      "label": "opposes",
+      "complement": "is opposed by",
+      "color": "red",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "relation_KFvoGR5D94FAckTvU-NtY",
+      "label": "informs",
+      "complement": "is informed by",
+      "color": "grey",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "relation_o71slp5XUAdWqFuXhm--D",
+      "label": "derived from",
+      "complement": "has derivation",
+      "color": "blue",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "rel_KhbHMhrsgnaGzXE_6d99x",
+      "label": "instantiates",
+      "complement": "is instantiated by",
+      "color": "black",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel_KhbHMhrsgnaGzXE_6d99x",
+      "status": "accepted"
+    },
+    {
+      "id": "rel_7DisFJBD1mBag790T8V88",
+      "label": "consistent with",
+      "complement": "is consistent with",
+      "color": "black",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel_7DisFJBD1mBag790T8V88",
+      "status": "accepted"
+    },
+    {
+      "id": "rel_Q_7d5BZ6GzNL7Wzib6wTO",
+      "label": "inconsistent with",
+      "complement": "is inconsistent with",
+      "color": "black",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel_Q_7d5BZ6GzNL7Wzib6wTO",
+      "status": "accepted"
+    },
+    {
+      "id": "rel_yvwN6jbdrcZEIoTqt4vjG",
+      "label": "enables",
+      "complement": "is enabled by",
+      "color": "black",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel_yvwN6jbdrcZEIoTqt4vjG",
+      "status": "accepted"
+    },
+    {
+      "id": "rel_mmU9KO64C7mS71wC6VSyH",
+      "label": "uses",
+      "complement": "used by",
+      "color": "black",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel_mmU9KO64C7mS71wC6VSyH",
+      "status": "accepted"
+    }
+  ],
+  "discourseRelations": [
+    {
+      "id": "rel3_qdfFJ6dOjtu7wcECvdpWu",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_Gp7JMdrzm9DUuPfBzUptc",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "rel3_cmaeYXIXzQjQbajQDp0SE",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "relationshipTypeId": "relation_6SXJtU8zEp8ctbfQuF5Ti",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "rel3_2tT6ahzChlYa-7nVWEQ0B",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "relationshipTypeId": "relation_dzAJE17IkEae0qq-_4AM4",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "rel3_Qq66AwiLFci6XyDVbouWu",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_wZiOhnAnXKDVhrvl-7Z4P",
+      "relationshipTypeId": "relation_o71slp5XUAdWqFuXhm--D",
+      "created": 1795537366754,
+      "modified": 1795537366754
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd48e879f44",
+      "sourceId": "node_LyyTDCfZHGTvQWfvU0h8m",
+      "destinationId": "node_VnAbDK_IqWL3QAteAd_FY",
+      "relationshipTypeId": "rel_KhbHMhrsgnaGzXE_6d99x",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_1GNyCqsQqGcaCVOodSMOM",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd5b4697bb2",
+      "sourceId": "node_LyyTDCfZHGTvQWfvU0h8m",
+      "destinationId": "node_Gp7JMdrzm9DUuPfBzUptc",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_RQNvvDj4SyQLhutG_bqIk",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd6dea98403",
+      "sourceId": "node_LyyTDCfZHGTvQWfvU0h8m",
+      "destinationId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_8XosSMzZiZsreafPQxXZw",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd7f87ecc53",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_LyyTDCfZHGTvQWfvU0h8m",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_sNx_s2WzSr3c6uYaJsS6z",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd8607fab3b",
+      "sourceId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "destinationId": "node_VnAbDK_IqWL3QAteAd_FY",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_P8VfCmeT5agVMn7kM42rj",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dd9041b7e4b",
+      "sourceId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "destinationId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "relationshipTypeId": "rel_Q_7d5BZ6GzNL7Wzib6wTO",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_b8PNis--VJhxXCsav4qNI",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dda4f1b0606",
+      "sourceId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "destinationId": "node_1HEGLbbU4UMRzwDKj_PxA",
+      "relationshipTypeId": "rel_7DisFJBD1mBag790T8V88",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_DrpiUo8z0kaKYGGTiknTH",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5ddb7f917f78",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "relationshipTypeId": "rel_Q_7d5BZ6GzNL7Wzib6wTO",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_BwATNO04yiiDMLeVucvUo",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5ddcce178007",
+      "sourceId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "destinationId": "node_E5uZ_O-NU-879JxbpJtcV",
+      "relationshipTypeId": "rel_7DisFJBD1mBag790T8V88",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_jJg_udEnt289bnVwxNdPR",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5ddd186b61b5",
+      "sourceId": "node_VnAbDK_IqWL3QAteAd_FY",
+      "destinationId": "node_VnAbDK_IqWL3QAteAd_FY",
+      "relationshipTypeId": "rel_yvwN6jbdrcZEIoTqt4vjG",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_3k1Zf0I-5gQzQzyU5-y3n",
+      "status": "accepted"
+    },
+    {
+      "id": "01a20e5e-c0df-76a0-8723-5dde29870952",
+      "sourceId": "node_wZiOhnAnXKDVhrvl-7Z4P",
+      "destinationId": "node_VnAbDK_IqWL3QAteAd_FY",
+      "relationshipTypeId": "relation_KFvoGR5D94FAckTvU-NtY",
+      "created": 1771362656254,
+      "modified": 1795537420511,
+      "importedFromRid": "orn:obsidian.schema:9acf887cb5547814/rel3_Ep0LWGsNsjYESeuivOb3e",
+      "status": "accepted"
+    }
+  ],
+  "showIdsInFrontmatter": false,
+  "nodesFolderPath": "",
+  "canvasFolderPath": "",
+  "canvasAttachmentsFolderPath": "attachments",
+  "nodeTagHotkey": "\\",
+  "showHelpMenuStatusBarIcon": false,
+  "showDiscourseContextOverlay": true,
+  "syncModeEnabled": false,
+  "spaceNames": {}
+}

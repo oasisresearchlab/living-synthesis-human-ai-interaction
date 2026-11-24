@@ -1,0 +1,13 @@
+# private: real names behind student pseudonyms
+student-pseudonyms.csv
+
+# per-user Obsidian UI state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# third-party talk videos (kept locally, not redistributed)
+attachments/*.mp4
+attachments/*.m4v
+
+.DS_Store
+.trash/

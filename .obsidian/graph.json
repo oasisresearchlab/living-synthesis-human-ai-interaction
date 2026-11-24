@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "path:\"Discourse Graph\"  ",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Discourse Graph/Questions\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14078556
+      }
+    },
+    {
+      "query": "path:\"Discourse Graph/Claims\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 7001692
+      }
+    },
+    {
+      "query": "path:\"Discourse Graph/Artifacts\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14048419
+      }
+    },
+    {
+      "query": "path:\"Discourse Graph/Evidence\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 13706019
+      }
+    },
+    {
+      "query": "path:\"Discourse Graph/Patterns\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.194816800714924,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.27036673130948596,
+  "close": false
+}

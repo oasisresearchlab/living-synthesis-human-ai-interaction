@@ -1,0 +1,56 @@
+filters:
+  and:
+    - NodeFormality == "ai-draft"
+formulas:
+  node_type: if(file.name.startsWith("QUE -"), "QUE", if(file.name.startsWith("CLM -"), "CLM", if(file.name.startsWith("EVD -"), "EVD", if(file.name.startsWith("ART -"), "ART", if(file.name.startsWith("PTN -"), "PTN", if(file.name.startsWith("THE -"), "THE", "?"))))))
+views:
+  - type: table
+    name: All AI drafts (by session)
+    order:
+      - file.name
+      - formula.node_type
+      - extractedFrom
+      - NodeFormality
+    sort:
+      - property: extractedFrom
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    description: Nodes extracted by Claude from seminar notes and transcripts. Change NodeFormality (e.g., to draft) once reviewed and the node drops out of this queue.
+    columnSize:
+      file.name: 1204
+  - type: table
+    name: ❓ Questions
+    filters:
+      and:
+        - file.name.startsWith("QUE -")
+    order:
+      - file.name
+      - extractedFrom
+  - type: table
+    name: 💡 Claims
+    filters:
+      and:
+        - file.name.startsWith("CLM -")
+    order:
+      - file.name
+      - extractedFrom
+  - type: table
+    name: 🔬 Evidence
+    filters:
+      and:
+        - file.name.startsWith("EVD -")
+    order:
+      - file.name
+      - extractedFrom
+  - type: table
+    name: 🧩 Patterns, Artifacts, Theories
+    filters:
+      or:
+        - file.name.startsWith("PTN -")
+        - file.name.startsWith("ART -")
+        - file.name.startsWith("THE -")
+    order:
+      - file.name
+      - formula.node_type
+      - extractedFrom
