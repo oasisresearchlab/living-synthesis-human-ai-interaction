@@ -1,0 +1,65 @@
+name: Deploy Quartz site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  QUARTZ_VERSION: v5.2.2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the vault
+        uses: actions/checkout@v6
+        with:
+          path: vault
+      - name: Check out Quartz ${{ env.QUARTZ_VERSION }}
+        uses: actions/checkout@v6
+        with:
+          repository: jackyzha0/quartz
+          ref: ${{ env.QUARTZ_VERSION }}
+          path: quartz
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: quartz/package-lock.json
+      - name: Install Quartz
+        working-directory: quartz
+        run: |
+          npm ci
+          cp ../vault/site/quartz.config.yaml quartz.config.yaml
+          npx quartz plugin install
+      - name: Color graph nodes by type
+        run: python3 vault/site/patch_graph.py quartz
+      - name: Prepare content from the vault
+        run: python3 vault/site/prepare_content.py vault quartz/content
+      - name: Build
+        working-directory: quartz
+        run: npx quartz build -d content
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
